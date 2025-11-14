@@ -1,0 +1,58 @@
+<div class="tf-topbar topbar-white bg-primary">
+  <h4>{{ section.settings.Announcementbar_text }} {{ shop.name }}</h4>
+</div>
+
+<style>
+  .tf-topbar {
+    background: {{section.settings.bg_color}};
+    width:100%;
+    padding: 1px;
+  }
+
+  .tf-topbar h4{
+    text-align: center;
+    padding: 0px;
+    color: {{ section.settings.text_color }};
+    line-height: 0px;
+  }
+</style>
+
+{% schema %}
+
+{
+  "name": "Announcement Bar",
+    "blocks": [
+    {
+      "type": "announcement-bar",
+      "name": "Announcement Bar"
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "Announcementbar_text",
+      "label": "Announcementbar_text",
+      "default": "Welcome to the store"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#9aa768"
+    },
+
+      {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    }
+  ],
+   "presets": [
+    {
+      "name": "Top bar"
+    }
+  ]
+}
+
+{% endschema %}

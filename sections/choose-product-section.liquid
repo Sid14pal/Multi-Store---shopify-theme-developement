@@ -1,0 +1,131 @@
+<div class="choose-product-section mb-110">
+   <div class="page-width page-width-desktop">
+      <div class="section-title text-center">
+         <h3>Choose What You Want</h3>
+      </div>
+      <div class="grid product-grid contains-card contains-card--product grid--4-col-desktop grid--2-col-tablet-down gy-4 justify-content-center">
+         <div class="col-lg-4 col-md-6">
+            <div class="choose-product-card hover-img style-2">
+               <a href="/shop"></a>
+               <div class="choose-product-card-content">
+                  <h2 class="first-text">Face</h2>
+                  <h2 class="second-text">Care</h2>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-4 col-md-6">
+            <div class="choose-product-card hover-img style-2">
+               <a href="/shop"></a>
+               <div class="choose-product-card-content">
+                  <h2 class="first-text">Body</h2>
+                  <h2 class="second-text style-2">Health</h2>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-4 col-md-6">
+            <div class="choose-product-card hover-img style-2">
+               <a href="/shop"></a>
+               <div class="choose-product-card-content style-2">
+                  <h2 class="first-text style-2">Hair</h2>
+                  <h2 class="second-text style-3">Care</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<style>
+    .section-title {
+    position: relative;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.section-title h3 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1;
+    text-transform: capitalize;
+    margin-bottom: 0;
+    position: relative;
+    flex-wrap: nowrap;
+}
+
+.choose-product-section .choose-product-card {
+    position: relative;
+}
+
+.choose-product-section .choose-product-card .choose-product-card-content .first-text {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.choose-product-section .choose-product-card .choose-product-card-content .second-text {
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 1;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px #353535;
+    -webkit-text-fill-color: transparent;
+}
+</style>
+
+
+{% schema %}
+{
+  "name": "Choose Product Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Choose What You Want"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_card",
+      "name": "Product Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "card_image",
+          "label": "Card Background Image"
+        },
+        {
+          "type": "text",
+          "id": "first_text",
+          "label": "First Text",
+          "default": "Face"
+        },
+        {
+          "type": "text",
+          "id": "second_text",
+          "label": "Second Text",
+          "default": "Care"
+        },
+        {
+          "type": "url",
+          "id": "card_link",
+          "label": "Card Link"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "presets": [
+    {
+      "name": "Choose Product Section"
+    }
+  ]
+}
+{% endschema %}
